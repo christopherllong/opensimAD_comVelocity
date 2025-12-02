@@ -1,5 +1,6 @@
 '''
-    Author: Antoine Falisse    
+    Author: Antoine Falisse
+    Edited by Christopher Long on 12/2/25 to include mediolateral center-of-mass velocity as output.
 
     This script uses OpenSimAD to generate a CasADi external function.
     
@@ -22,11 +23,12 @@
             - ground reaction forces
             - ground reaction moments
             - body origins
+            - mediolateral center-of-mass velocity
             
     You can adjust the script generateExternalFunction to modify the inputs or
     outputs.
             
-    This script also saves a dictionnary F_map with the indices of the
+    This script also saves a dictionary F_map with the indices of the
     outputs of F. E.g., the left hip flexion index is given by 
     F_map['residuals']['hip_flexion_l'].
             
@@ -35,7 +37,7 @@
 '''
 
 import os
-from utilities import generateExternalFunction
+from utilities_comVelocity import generateExternalFunction
 
 pathMain = os.getcwd()
 
@@ -43,7 +45,7 @@ pathMain = os.getcwd()
 # Provide path to the directory where you want to save your results.
 pathModelFolder = os.path.join(pathMain, 'examples')
 # Provide path to OpenSim model.
-modelName = 'Hamner_modified'
+modelName = 'Hamner_modified_amp'
 pathOpenSimModel = os.path.join(pathModelFolder, modelName + '.osim')
 # Provide path to the InverseDynamics folder.
 # To verify that what we did is correct, we compare torques returned by the
