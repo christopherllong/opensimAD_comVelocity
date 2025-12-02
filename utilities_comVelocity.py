@@ -1,3 +1,5 @@
+# This script has been modified to include the mediolateral center of mass velocity (COM_vel_x) as an output from the external function
+# *Search CL ADDED to see changes*
 import os
 import sys
 import opensim
@@ -566,7 +568,7 @@ def generateExternalFunction(pathOpenSimModel, outputDir, pathID,
         # CL ADDED THIS NEW SECTION - MOVED HERE (BEFORE return 0;)
         # Export COM velocity
         f.write('\t/// COM velocity (mediolateral component).\n')
-        f.write('\tres[0][%i] = value<T>(COM_vel[2]);\n' % count_acc)  # x-direction (mediolateral)
+        f.write('\tres[0][%i] = value<T>(COM_vel[2]);\n' % count_acc)  # Index 2 refers to the z-axis component of the COM velocity (mediolateral direction in OpenSim coordinate system)
         F_map['COM_vel_x'] = count_acc
         count_acc += 1
 
