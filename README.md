@@ -1,3 +1,5 @@
+# ***This is a modified version of OpenSimAD that includes mediolateral center-of-mass velocity as an output from the external function. Specifically, we updated the [generateExternalFunction](https://github.com/christopherllong/opensimAD_comVelocity/blob/72a7494bf14eecbe9c5a53b928b1162fa17fc677/utilities_comVelocity.py#L15) code in the utilities.py file. The updated version is named utilities_comVelocity, which is imported at the beginning of the [main.py](https://github.com/christopherllong/opensimAD_comVelocity/blob/72a7494bf14eecbe9c5a53b928b1162fa17fc677/main.py#L40) script.***
+
 # SimbodyAD - OpenSimAD
 Libraries for SimbodyAD and OpenSimAD - Simbody and OpenSim with support for Algorithmic Differentiation.
 
