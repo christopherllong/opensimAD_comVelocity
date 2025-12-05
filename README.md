@@ -32,7 +32,7 @@ Here we provide code and examples to generate external functions automatically g
 	- (Optional): Install an IDE such as Spyder: `conda install spyder`
 	- Clone the repository to your machine: 
 		- Navigate to the directory where you want to download the code: eg. `cd Documents`. Make sure there are no spaces in this path.
-		- Clone the repository: `git clone https://github.com/antoinefalisse/opensimAD_comVelocity.git`
+		- Clone the repository: `git clone https://github.com/christopherllong/opensimAD_comVelocity.git`
 		- Navigate to the directory: `cd opensimAD_comVelocity`
 	- Install required packages: `python -m pip install -r requirements.txt`
 
