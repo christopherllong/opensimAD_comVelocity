@@ -644,7 +644,7 @@ def generateExternalFunction(pathOpenSimModel, outputDir, pathID,
             suffix_header = "_moment"
         headers.append(coordinateSet.get(coord).getName() + suffix_header)
         
-    from utilities import storage2df    
+    from utilities_comVelocity import storage2df    
     ID_osim_df = storage2df(os.path.join(outputDir,
                                   "ID_withOsimAndIDTool.sto"), headers)
     ID_osim = np.zeros((nCoordinates))
